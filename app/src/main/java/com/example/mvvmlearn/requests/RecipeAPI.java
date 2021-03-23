@@ -1,5 +1,6 @@
 package com.example.mvvmlearn.requests;
 
+import com.example.mvvmlearn.requests.responses.RecipeResponse;
 import com.example.mvvmlearn.requests.responses.RecipeSearchResponse;
 
 import retrofit2.Call;
@@ -18,9 +19,9 @@ public interface RecipeAPI {
 
     //GET RECIPE
     @GET("api/get")
-    Call<RecipeSearchResponse> getRecipe(
+    Call<RecipeResponse> getRecipe(
             @Query("key") String key,
-            @Query("rid") String recipe_id
+            @Query("rId") String recipe_id
     );
 
 
